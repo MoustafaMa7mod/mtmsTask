@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
         self.configLocationManager()
         self.configMapView()
         self.configSideMenu()
-//        self.updateMenus()
     }
     
         
@@ -51,8 +50,10 @@ class HomeViewController: UIViewController {
     // MARK:- config side menu
 
     private func configSideMenu(){
-        sideMenu = SideMenuNavigationController(rootViewController: UIViewController())
+        sideMenu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
         sideMenu?.leftSide = true
+        sideMenu?.setNavigationBarHidden(true, animated: true)
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
     }
 
     
