@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,6 +89,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2321ADEA2636FBDE00D45682 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2321ADEB2636FBEE00D45682 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2321ADED2636FC1400D45682 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2321ADEC2636FBFF00D45682 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23351E9E2636D3E10057391D /* AppDelegate.swift */,
+				23351EA72636D3E30057391D /* Assets.xcassets */,
+				23351EA92636D3E30057391D /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2321ADED2636FC1400D45682 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2321ADEE2636FC2C00D45682 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2321ADEE2636FC2C00D45682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23351EA42636D3E10057391D /* Main.storyboard */,
+				23351EA22636D3E10057391D /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23351E922636D3E10057391D = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +156,9 @@
 		23351E9D2636D3E10057391D /* MTMSTask */ = {
 			isa = PBXGroup;
 			children = (
-				23351E9E2636D3E10057391D /* AppDelegate.swift */,
-				23351EA22636D3E10057391D /* ViewController.swift */,
-				23351EA42636D3E10057391D /* Main.storyboard */,
-				23351EA72636D3E30057391D /* Assets.xcassets */,
-				23351EA92636D3E30057391D /* LaunchScreen.storyboard */,
+				2321ADEC2636FBFF00D45682 /* Common */,
+				2321ADEB2636FBEE00D45682 /* Controllers */,
+				2321ADEA2636FBDE00D45682 /* Helper */,
 				23351EAC2636D3E30057391D /* Info.plist */,
 			);
 			path = MTMSTask;
@@ -162,7 +202,6 @@
 				7785CAAB0C0CCBC09093E5A4 /* Pods-MTMSTaskTests.debug.xcconfig */,
 				0A0844FFBB36896F0CE2A2A1 /* Pods-MTMSTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
