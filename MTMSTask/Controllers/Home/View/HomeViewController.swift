@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import SideMenu
 
 class HomeViewController: UIViewController {
 
@@ -17,24 +18,19 @@ class HomeViewController: UIViewController {
 
     var locationManager = CLLocationManager()
     var selectedLocation: CLLocation? = CLLocation()
-
+    var sideMenu: SideMenuNavigationController?
     
     // MARK: - main functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configLocationManager()
         self.configMapView()
+        self.configSideMenu()
+//        self.updateMenus()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.configLocationManager()
-        self.configMapView()
         
-    }
-    
-    
-    // MARK:- config map view and loaction manager
+    // MARK:- config loaction manager
     private func configLocationManager(){
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
@@ -44,7 +40,7 @@ class HomeViewController: UIViewController {
             locationManager.startUpdatingLocation()
         }
     }
-    
+    // MARK:- config map view
     private func configMapView(){
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
@@ -52,8 +48,19 @@ class HomeViewController: UIViewController {
         mapView.settings.compassButton = true
     }
     
+    // MARK:- config side menu
 
+    private func configSideMenu(){
+        sideMenu = SideMenuNavigationController(rootViewController: UIViewController())
+        sideMenu?.leftSide = true
+    }
 
-
+    
+    @IBAction func showSideMenu(_ sender: Any) {
+        present(sideMenu!, animated: true, completion: nil)
+    }
+    
+    
+    
+    
 }
-
