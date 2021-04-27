@@ -10,4 +10,5 @@ import Foundation
 struct CollectionPath {
     static let source = "Source"
     static let destination = "Destination"
+    static let drivers = "Drivers"
 }

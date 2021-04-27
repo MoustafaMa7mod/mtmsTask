@@ -38,8 +38,6 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
         guard let userLocation = locations.last else {
             return
         }
-        print("Latitude :- \(userLocation.coordinate.latitude)")
-        print("Longitude :-\(userLocation.coordinate.longitude)")
         self.showLocationAndMarkerInMap(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
         self.locationManager.stopUpdatingLocation()
     }
@@ -50,11 +48,9 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
         mapView.clear()
         let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         selectedLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        self.getAddressFromLocation(loc: selectedLocation!)
         let marker = GMSMarker(position: center)
         marker.map = self.mapView
     }
@@ -82,7 +78,7 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
                                             let placemark = placemarks![0]
                                             print(placemark)
                                             let data: [String:Any] = ["name": placemark.name ?? "" , "latitude": loc.coordinate.latitude , "longitude" : loc.coordinate.longitude]
-                                            self.destinationLocationViewModel.insertDestinationLocation(data: data) { done in
+                                            self.homeViewModel.insertDestinationLocation(data: data) { done in
                                                 if done {
                                                     print("data insert succeesfully")
                                                 }else{

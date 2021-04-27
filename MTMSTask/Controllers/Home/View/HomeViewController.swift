@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     var locationManager = CLLocationManager()
     var selectedLocation: CLLocation? = CLLocation()
     var sideMenu: SideMenuNavigationController?
-    var destinationLocationViewModel = DestinationLocationViewModel()
+    var homeViewModel = HomeViewModel()
     
     // MARK: - main functions
     override func viewDidLoad() {
@@ -63,5 +63,34 @@ class HomeViewController: UIViewController {
     @IBAction func showSideMenu(_ sender: Any) {
         present(sideMenu!, animated: true, completion: nil)
     }
+    
+    @IBAction func makeRequestRd(_ sender: Any) {
+        guard let curerntLocation = selectedLocation else {
+            return
+        }
+        
+        self.homeViewModel.getDriversData(currentLocation: curerntLocation , completion: { [weak self] loadData in
+            if loadData {
+                DispatchQueue.main.async {
+                    self?.showAlertWithNearbyDerivers()
+                }
+                
+            }
+        })
+        
+    }
+    
+    private func showAlertWithNearbyDerivers(){
+        let nearbyLocation = self.homeViewModel.formatLocationNameOfNearbyDrivers()
+        print(nearbyLocation)
+        let aletController = UIAlertController(title: "Nearby Drivers", message: nearbyLocation, preferredStyle: .alert)
+        aletController.addAction(UIAlertAction(title: "OK" , style: .default, handler: nil))
+        
+        if !(self.navigationController?.visibleViewController?.isKind(of: UIAlertController.self))! {
+            self.present(aletController, animated: true, completion: nil)
+        }
+    }
+    
+    
     
 }
