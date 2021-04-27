@@ -8,44 +8,40 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
-struct CollectionPath {
-    static let source = "Source"
-    static let destinationLocation = "destinationLocation"
-}
-
 
 class FirestoreReferenceManager{
-    var settings = FirestoreSettings()
-    let db = Firestore.firestore()
-    let shared = FirestoreReferenceManager()
+    static let shared = FirestoreReferenceManager()
+
     
-    func insertInDB(collectionPath: String ,data: [String: Any], documentName: String?, errorCompletion: @escaping () -> () = {  }, successCompletion: @escaping (_ docID: String) -> () = {_ in  }) {
+    private var settings = FirestoreSettings()
+    private let db = Firestore.firestore()
+    
+    private init() {
+        settings.isPersistenceEnabled = true
+        db.settings = settings
+    }
+    
+    func insertInDB(collectionPath: String ,data: [String: Any], completion: @escaping (Bool) -> Void ) {
         let root = db.collection(collectionPath)
         let docId = root.document().documentID
-        var document = String()
-        if documentName == nil {
-            document = docId
-        }else{
-            document = documentName ?? ""
-        }
-        db.collection(collectionPath).document(document).setData(data, merge: true) { error in
+        db.collection(collectionPath).document(docId).setData(data, merge: true) { error in
             if let err = error {
                 print(err)
-                errorCompletion()
+                completion(false)
             } else {
-                successCompletion(document)
+                completion(true)
             }
         }
     }
     
-    func getData(collectionPath: String,completion: @escaping ([String: Any] , Bool) -> Void){
+    func getData(collectionPath: String,completion: @escaping ([String: Any]?) -> Void){
         db.collection(collectionPath).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                completion([:] , false)
+                completion(nil)
             } else {
                 for document in querySnapshot!.documents {
-                    completion(document.data() , true)
+                    completion(document.data())
                 }
             }
         }

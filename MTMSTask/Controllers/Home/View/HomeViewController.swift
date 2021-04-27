@@ -13,9 +13,10 @@ class HomeViewController: UIViewController {
 
     // MARK: - outlets
     @IBOutlet weak var mapView: GMSMapView!
-    
-    // MARK: - variables
+    @IBOutlet weak var yourLocationTextField: UITextField!
+    @IBOutlet weak var destinationTextField: UITextField!
 
+    // MARK: - variables
     var locationManager = CLLocationManager()
     var selectedLocation: CLLocation? = CLLocation()
     var sideMenu: SideMenuNavigationController?
@@ -54,14 +55,12 @@ class HomeViewController: UIViewController {
         sideMenu?.leftSide = true
         sideMenu?.setNavigationBarHidden(true, animated: true)
         SideMenuManager.default.leftMenuNavigationController = sideMenu
+        
     }
 
     
     @IBAction func showSideMenu(_ sender: Any) {
         present(sideMenu!, animated: true, completion: nil)
     }
-    
-    
-    
     
 }

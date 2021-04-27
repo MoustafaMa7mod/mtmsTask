@@ -52,8 +52,8 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
         print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
         mapView.clear()
         let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        
         selectedLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        self.getAddressFromLocation(loc: selectedLocation!)
         let marker = GMSMarker(position: center)
         marker.map = self.mapView
     }
@@ -63,34 +63,56 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
         let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 17.0)
         self.mapView.camera = camera
         selectedLocation =  CLLocation(latitude: lat, longitude: long)
+        self.getAddressFromLocation(loc: selectedLocation!)
         let marker = GMSMarker(position: center)
         marker.map = self.mapView
 
     }
     
     
-//    func getAddressFromLocation(loc: CLLocation, completion: @escaping (LocationModel)->Void){
-//        let ceo: CLGeocoder = CLGeocoder()
-//        ceo.reverseGeocodeLocation(loc, completionHandler:
-//                                    {(placemarks, error) in
-//                                        if (error != nil){
-//                                            print("reverse geodcode fail: \(error!.localizedDescription)")
-//                                        }
-//                                        let placemark = placemarks! as [CLPlacemark]
-//                                        if placemark.count > 0 {
-//                                            let placemark = placemarks![0]
-//                                            let locationModel = LocationModel(lat: loc.coordinate.latitude, long: loc.coordinate.longitude, locationInfo: placemark)
-//                                            completion(locationModel)
-//                                        }
-//                                    })
-//       
-//        
-//    }
+    func getAddressFromLocation(loc: CLLocation){
+        let ceo: CLGeocoder = CLGeocoder()
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+                                    {(placemarks, error) in
+                                        if (error != nil){
+                                            print("reverse geodcode fail: \(error!.localizedDescription)")
+                                        }
+                                        let placemark = placemarks! as [CLPlacemark]
+                                        if placemark.count > 0 {
+                                            let placemark = placemarks![0]
+                                            print(placemark)
+//                                            let data: [String:Any] = ["name": placemark.name ?? "" , "latitude": loc.coordinate.latitude , "longitude" : loc.coordinate.longitude]
+//                                            FirestoreReferenceManager.shared.insertInDB(collectionPath: CollectionPath.source, data: data) { insertData in
+//                                                print(insertData)
+//                                            }
+                                        }
+                                    })
+       
+        
+    }
+}
+
+extension HomeViewController: UITextFieldDelegate{
     
-    
-    
-    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == yourLocationTextField {
+            let viewController = SourceLocationViewController.instantiate()
+            viewController.passData = { [weak self] sourceLocationData in
+                self?.yourLocationTextField.text = sourceLocationData.name ?? ""
+                self?.showLocationAndMarkerInMap(sourceLocationData.latitude ?? 0.0, sourceLocationData.longitude ?? 0.0)
+
+            }
+            self.present(viewController , animated: true)
+            return false
+        }
+        
+        return true
+    }
+
     
 }
+
+
+
 
 

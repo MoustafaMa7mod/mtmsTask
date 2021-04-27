@@ -22,6 +22,14 @@
 		23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */; };
 		23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F926375C6900380312 /* UITableView+Extensions.swift */; };
 		23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */; };
+		23D7A47A26376E2600380312 /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A47926376E2600380312 /* FirebaseKeys.swift */; };
+		23D7A48426377A5000380312 /* SourceLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D7A48326377A5000380312 /* SourceLocation.storyboard */; };
+		23D7A48926377A6300380312 /* SourceLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A48826377A6300380312 /* SourceLocationViewController.swift */; };
+		23D7A49026377B9A00380312 /* SourceLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A48E26377B9A00380312 /* SourceLocationCell.swift */; };
+		23D7A49126377B9A00380312 /* SourceLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D7A48F26377B9A00380312 /* SourceLocationCell.xib */; };
+		23D7A49926377BE500380312 /* SourceLocationVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A49826377BE500380312 /* SourceLocationVC+TableViewDelegate.swift */; };
+		23D7A4A026377F6700380312 /* SourceLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A49F26377F6600380312 /* SourceLocationModel.swift */; };
+		23D7A4AB26377FB800380312 /* SourceLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A4AA26377FB800380312 /* SourceLocationViewModel.swift */; };
 		4F95D9E442E4C31D5C42ABBF /* Pods_MTMSTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFC6CAEBB4F5DE517630DF /* Pods_MTMSTask.framework */; };
 		CC2F8CF7C4731963B6077F4E /* Pods_MTMSTask_MTMSTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B062CBA4C5E3385CF51B24 /* Pods_MTMSTask_MTMSTaskUITests.framework */; };
 		ED4998862EF7AEAA37D5A9E1 /* Pods_MTMSTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94553944B49337289DA23AA1 /* Pods_MTMSTaskTests.framework */; };
@@ -67,6 +75,14 @@
 		23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		23D7A3F926375C6900380312 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
+		23D7A47926376E2600380312 /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
+		23D7A48326377A5000380312 /* SourceLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SourceLocation.storyboard; sourceTree = "<group>"; };
+		23D7A48826377A6300380312 /* SourceLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationViewController.swift; sourceTree = "<group>"; };
+		23D7A48E26377B9A00380312 /* SourceLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationCell.swift; sourceTree = "<group>"; };
+		23D7A48F26377B9A00380312 /* SourceLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceLocationCell.xib; sourceTree = "<group>"; };
+		23D7A49826377BE500380312 /* SourceLocationVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SourceLocationVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		23D7A49F26377F6600380312 /* SourceLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationModel.swift; sourceTree = "<group>"; };
+		23D7A4AA26377FB800380312 /* SourceLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationViewModel.swift; sourceTree = "<group>"; };
 		47B062CBA4C5E3385CF51B24 /* Pods_MTMSTask_MTMSTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTMSTask_MTMSTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAB3333D07A156E4D11EAC4 /* Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-MTMSTask-MTMSTaskUITests/Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7785CAAB0C0CCBC09093E5A4 /* Pods-MTMSTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTMSTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MTMSTaskTests/Pods-MTMSTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +134,7 @@
 		2321ADEB2636FBEE00D45682 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				23D7A48126377A3100380312 /* Source Location */,
 				2321ADED2636FC1400D45682 /* Home */,
 			);
 			path = Controllers;
@@ -157,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				2321ADF5263700D100D45682 /* GoogleKey.swift */,
+				23D7A47926376E2600380312 /* FirebaseKeys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -236,6 +254,52 @@
 				23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */,
 			);
 			path = "Main Classes";
+			sourceTree = "<group>";
+		};
+		23D7A48126377A3100380312 /* Source Location */ = {
+			isa = PBXGroup;
+			children = (
+				23D7A49E26377F4800380312 /* ViewModel */,
+				23D7A49D26377F4100380312 /* Model */,
+				23D7A48226377A3B00380312 /* View */,
+			);
+			path = "Source Location";
+			sourceTree = "<group>";
+		};
+		23D7A48226377A3B00380312 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23D7A48D26377B7800380312 /* Cell */,
+				23D7A48326377A5000380312 /* SourceLocation.storyboard */,
+				23D7A48826377A6300380312 /* SourceLocationViewController.swift */,
+				23D7A49826377BE500380312 /* SourceLocationVC+TableViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23D7A48D26377B7800380312 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23D7A48E26377B9A00380312 /* SourceLocationCell.swift */,
+				23D7A48F26377B9A00380312 /* SourceLocationCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		23D7A49D26377F4100380312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23D7A49F26377F6600380312 /* SourceLocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23D7A49E26377F4800380312 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23D7A4AA26377FB800380312 /* SourceLocationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		68D5400C31D1ECAE0BC01CD7 /* Frameworks */ = {
@@ -374,7 +438,9 @@
 				23351EAB2636D3E30057391D /* LaunchScreen.storyboard in Resources */,
 				2321ADF02636FD9A00D45682 /* GoogleService-Info.plist in Resources */,
 				23351EA82636D3E30057391D /* Assets.xcassets in Resources */,
+				23D7A48426377A5000380312 /* SourceLocation.storyboard in Resources */,
 				23351EA62636D3E10057391D /* Home.storyboard in Resources */,
+				23D7A49126377B9A00380312 /* SourceLocationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,11 +603,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2321AE0A26370AF700D45682 /* UIView.swift in Sources */,
+				23D7A4A026377F6700380312 /* SourceLocationModel.swift in Sources */,
+				23D7A4AB26377FB800380312 /* SourceLocationViewModel.swift in Sources */,
+				23D7A49026377B9A00380312 /* SourceLocationCell.swift in Sources */,
 				2321AE042637029300D45682 /* HomeVC+Delegate.swift in Sources */,
 				23351EA32636D3E10057391D /* HomeViewController.swift in Sources */,
+				23D7A49926377BE500380312 /* SourceLocationVC+TableViewDelegate.swift in Sources */,
 				23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */,
 				23351E9F2636D3E10057391D /* AppDelegate.swift in Sources */,
+				23D7A48926377A6300380312 /* SourceLocationViewController.swift in Sources */,
 				2321ADF6263700D100D45682 /* GoogleKey.swift in Sources */,
+				23D7A47A26376E2600380312 /* FirebaseKeys.swift in Sources */,
 				23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */,
 				2321AE1E263714B100D45682 /* HomeVC+SideMenu.swift in Sources */,
 				23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */,

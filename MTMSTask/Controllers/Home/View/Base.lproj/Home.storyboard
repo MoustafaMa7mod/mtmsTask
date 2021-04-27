@@ -64,6 +64,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="EtY-ab-mc8"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5CP-ZJ-Nyo">
                                         <rect key="frame" x="8" y="122" width="358" height="50"/>
@@ -77,6 +80,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="cMU-e3-7nl"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89812904599999999" green="0.89382809399999996" blue="0.90980714559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -112,7 +118,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tdf-Wv-Db5"/>
                     <connections>
+                        <outlet property="destinationTextField" destination="5CP-ZJ-Nyo" id="CvD-TC-KZN"/>
                         <outlet property="mapView" destination="PXx-Yi-4dw" id="JTm-fR-4WJ"/>
+                        <outlet property="yourLocationTextField" destination="32G-7C-6Dv" id="MTY-dh-MZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
