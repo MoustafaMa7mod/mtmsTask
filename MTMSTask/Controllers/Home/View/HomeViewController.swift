@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     var locationManager = CLLocationManager()
     var selectedLocation: CLLocation? = CLLocation()
     var sideMenu: SideMenuNavigationController?
+    var destinationLocationViewModel = DestinationLocationViewModel()
     
     // MARK: - main functions
     override func viewDidLoad() {

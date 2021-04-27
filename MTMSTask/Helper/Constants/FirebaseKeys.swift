@@ -9,5 +9,5 @@ import Foundation
 
 struct CollectionPath {
     static let source = "Source"
-    static let destinationLocation = "destinationLocation"
+    static let destination = "Destination"
 }

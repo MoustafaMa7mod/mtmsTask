@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configGoogleMap(){
         GMSServices.provideAPIKey(GoogleKey.key)
         GMSPlacesClient.provideAPIKey(GoogleKey.key)
-
     }
 
 

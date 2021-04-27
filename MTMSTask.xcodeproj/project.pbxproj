@@ -19,6 +19,8 @@
 		23351EAB2636D3E30057391D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23351EA92636D3E30057391D /* LaunchScreen.storyboard */; };
 		23351EB62636D3E30057391D /* MTMSTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23351EB52636D3E30057391D /* MTMSTaskTests.swift */; };
 		23351EC12636D3E30057391D /* MTMSTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23351EC02636D3E30057391D /* MTMSTaskUITests.swift */; };
+		2358943D2638489D0098AC85 /* DestinationLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358943C2638489D0098AC85 /* DestinationLocationModel.swift */; };
+		23589445263848CC0098AC85 /* DestinationLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23589444263848CC0098AC85 /* DestinationLocationViewModel.swift */; };
 		23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */; };
 		23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F926375C6900380312 /* UITableView+Extensions.swift */; };
 		23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */; };
@@ -30,6 +32,7 @@
 		23D7A49926377BE500380312 /* SourceLocationVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A49826377BE500380312 /* SourceLocationVC+TableViewDelegate.swift */; };
 		23D7A4A026377F6700380312 /* SourceLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A49F26377F6600380312 /* SourceLocationModel.swift */; };
 		23D7A4AB26377FB800380312 /* SourceLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A4AA26377FB800380312 /* SourceLocationViewModel.swift */; };
+		23D7A4B12637970B00380312 /* HomeVC+SearchPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A4B02637970B00380312 /* HomeVC+SearchPlaces.swift */; };
 		4F95D9E442E4C31D5C42ABBF /* Pods_MTMSTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFC6CAEBB4F5DE517630DF /* Pods_MTMSTask.framework */; };
 		CC2F8CF7C4731963B6077F4E /* Pods_MTMSTask_MTMSTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B062CBA4C5E3385CF51B24 /* Pods_MTMSTask_MTMSTaskUITests.framework */; };
 		ED4998862EF7AEAA37D5A9E1 /* Pods_MTMSTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94553944B49337289DA23AA1 /* Pods_MTMSTaskTests.framework */; };
@@ -72,6 +75,8 @@
 		23351EBC2636D3E30057391D /* MTMSTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTMSTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23351EC02636D3E30057391D /* MTMSTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMSTaskUITests.swift; sourceTree = "<group>"; };
 		23351EC22636D3E30057391D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2358943C2638489D0098AC85 /* DestinationLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationModel.swift; sourceTree = "<group>"; };
+		23589444263848CC0098AC85 /* DestinationLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationViewModel.swift; sourceTree = "<group>"; };
 		23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		23D7A3F926375C6900380312 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		23D7A49826377BE500380312 /* SourceLocationVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SourceLocationVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		23D7A49F26377F6600380312 /* SourceLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationModel.swift; sourceTree = "<group>"; };
 		23D7A4AA26377FB800380312 /* SourceLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocationViewModel.swift; sourceTree = "<group>"; };
+		23D7A4B02637970B00380312 /* HomeVC+SearchPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+SearchPlaces.swift"; sourceTree = "<group>"; };
 		47B062CBA4C5E3385CF51B24 /* Pods_MTMSTask_MTMSTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTMSTask_MTMSTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAB3333D07A156E4D11EAC4 /* Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-MTMSTask-MTMSTaskUITests/Pods-MTMSTask-MTMSTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7785CAAB0C0CCBC09093E5A4 /* Pods-MTMSTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTMSTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MTMSTaskTests/Pods-MTMSTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 		2321ADED2636FC1400D45682 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2358943B263848780098AC85 /* ViewModel */,
+				2358943A263848720098AC85 /* Model */,
 				2321ADEE2636FC2C00D45682 /* View */,
 			);
 			path = Home;
@@ -166,6 +174,7 @@
 				23351EA22636D3E10057391D /* HomeViewController.swift */,
 				2321AE032637029300D45682 /* HomeVC+Delegate.swift */,
 				2321AE1D263714B100D45682 /* HomeVC+SideMenu.swift */,
+				23D7A4B02637970B00380312 /* HomeVC+SearchPlaces.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +247,22 @@
 				23351EC22636D3E30057391D /* Info.plist */,
 			);
 			path = MTMSTaskUITests;
+			sourceTree = "<group>";
+		};
+		2358943A263848720098AC85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2358943C2638489D0098AC85 /* DestinationLocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2358943B263848780098AC85 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23589444263848CC0098AC85 /* DestinationLocationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		23D7A3F026375B3000380312 /* Side Menu */ = {
@@ -604,9 +629,11 @@
 			files = (
 				2321AE0A26370AF700D45682 /* UIView.swift in Sources */,
 				23D7A4A026377F6700380312 /* SourceLocationModel.swift in Sources */,
+				23589445263848CC0098AC85 /* DestinationLocationViewModel.swift in Sources */,
 				23D7A4AB26377FB800380312 /* SourceLocationViewModel.swift in Sources */,
 				23D7A49026377B9A00380312 /* SourceLocationCell.swift in Sources */,
 				2321AE042637029300D45682 /* HomeVC+Delegate.swift in Sources */,
+				2358943D2638489D0098AC85 /* DestinationLocationModel.swift in Sources */,
 				23351EA32636D3E10057391D /* HomeViewController.swift in Sources */,
 				23D7A49926377BE500380312 /* SourceLocationVC+TableViewDelegate.swift in Sources */,
 				23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */,
@@ -617,6 +644,7 @@
 				23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */,
 				2321AE1E263714B100D45682 /* HomeVC+SideMenu.swift in Sources */,
 				23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */,
+				23D7A4B12637970B00380312 /* HomeVC+SearchPlaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

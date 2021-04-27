@@ -7,6 +7,7 @@
 
 import Foundation
 import GoogleMaps
+import GooglePlaces
 
 extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
     
@@ -63,7 +64,6 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
         let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 17.0)
         self.mapView.camera = camera
         selectedLocation =  CLLocation(latitude: lat, longitude: long)
-        self.getAddressFromLocation(loc: selectedLocation!)
         let marker = GMSMarker(position: center)
         marker.map = self.mapView
 
@@ -81,10 +81,15 @@ extension HomeViewController: CLLocationManagerDelegate , GMSMapViewDelegate{
                                         if placemark.count > 0 {
                                             let placemark = placemarks![0]
                                             print(placemark)
-//                                            let data: [String:Any] = ["name": placemark.name ?? "" , "latitude": loc.coordinate.latitude , "longitude" : loc.coordinate.longitude]
-//                                            FirestoreReferenceManager.shared.insertInDB(collectionPath: CollectionPath.source, data: data) { insertData in
-//                                                print(insertData)
-//                                            }
+                                            let data: [String:Any] = ["name": placemark.name ?? "" , "latitude": loc.coordinate.latitude , "longitude" : loc.coordinate.longitude]
+                                            self.destinationLocationViewModel.insertDestinationLocation(data: data) { done in
+                                                if done {
+                                                    print("data insert succeesfully")
+                                                }else{
+                                                    print("error when insert data")
+                                                }
+                                                
+                                            }
                                         }
                                     })
        
@@ -100,13 +105,25 @@ extension HomeViewController: UITextFieldDelegate{
             viewController.passData = { [weak self] sourceLocationData in
                 self?.yourLocationTextField.text = sourceLocationData.name ?? ""
                 self?.showLocationAndMarkerInMap(sourceLocationData.latitude ?? 0.0, sourceLocationData.longitude ?? 0.0)
-
+                
             }
             self.present(viewController , animated: true)
             return false
+        }else{
+            let autocompleteController = GMSAutocompleteViewController()
+            autocompleteController.delegate = self
+            // Specify the place data types to return.
+            let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.all.rawValue))
+            autocompleteController.placeFields = fields
+            // Specify a filter.
+            let filter = GMSAutocompleteFilter()
+            filter.type = .establishment
+            filter.country = "EG"
+            autocompleteController.autocompleteFilter = filter
+            // Display the autocomplete view controller.
+            present(autocompleteController, animated: true, completion: nil)
+            return false
         }
-        
-        return true
     }
 
     
