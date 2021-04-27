@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2321ADF02636FD9A00D45682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2321ADEF2636FD9A00D45682 /* GoogleService-Info.plist */; };
 		2321ADF6263700D100D45682 /* GoogleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321ADF5263700D100D45682 /* GoogleKey.swift */; };
 		2321AE042637029300D45682 /* HomeVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321AE032637029300D45682 /* HomeVC+Delegate.swift */; };
-		2321AE0A26370AF700D45682 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321AE0926370AF700D45682 /* UIView.swift */; };
-		2321AE1E263714B100D45682 /* HomeVC+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321AE1D263714B100D45682 /* HomeVC+SideMenu.swift */; };
 		23351E9F2636D3E10057391D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23351E9E2636D3E10057391D /* AppDelegate.swift */; };
 		23351EA32636D3E10057391D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23351EA22636D3E10057391D /* HomeViewController.swift */; };
 		23351EA62636D3E10057391D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23351EA42636D3E10057391D /* Home.storyboard */; };
@@ -21,6 +18,9 @@
 		23351EC12636D3E30057391D /* MTMSTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23351EC02636D3E30057391D /* MTMSTaskUITests.swift */; };
 		2358943D2638489D0098AC85 /* DestinationLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358943C2638489D0098AC85 /* DestinationLocationModel.swift */; };
 		23589445263848CC0098AC85 /* DestinationLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23589444263848CC0098AC85 /* DestinationLocationViewModel.swift */; };
+		23589456263853D40098AC85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23589455263853D40098AC85 /* GoogleService-Info.plist */; };
+		2358945B263853E10098AC85 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358945A263853E10098AC85 /* UIView.swift */; };
+		23589460263853EB0098AC85 /* HomeVC+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358945F263853EB0098AC85 /* HomeVC+SideMenu.swift */; };
 		23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */; };
 		23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3F926375C6900380312 /* UITableView+Extensions.swift */; };
 		23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */; };
@@ -57,11 +57,8 @@
 
 /* Begin PBXFileReference section */
 		0A0844FFBB36896F0CE2A2A1 /* Pods-MTMSTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTMSTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MTMSTaskTests/Pods-MTMSTaskTests.release.xcconfig"; sourceTree = "<group>"; };
-		2321ADEF2636FD9A00D45682 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2321ADF5263700D100D45682 /* GoogleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleKey.swift; sourceTree = "<group>"; };
 		2321AE032637029300D45682 /* HomeVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Delegate.swift"; sourceTree = "<group>"; };
-		2321AE0926370AF700D45682 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		2321AE1D263714B100D45682 /* HomeVC+SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+SideMenu.swift"; sourceTree = "<group>"; };
 		23351E9B2636D3E10057391D /* MTMSTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTMSTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23351E9E2636D3E10057391D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23351EA22636D3E10057391D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +74,9 @@
 		23351EC22636D3E30057391D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2358943C2638489D0098AC85 /* DestinationLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationModel.swift; sourceTree = "<group>"; };
 		23589444263848CC0098AC85 /* DestinationLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationViewModel.swift; sourceTree = "<group>"; };
+		23589455263853D40098AC85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2358945A263853E10098AC85 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2358945F263853EB0098AC85 /* HomeVC+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+SideMenu.swift"; sourceTree = "<group>"; };
 		23D7A3F426375BEF00380312 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		23D7A3F926375C6900380312 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		23D7A3FF2637621700380312 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 		2321ADEC2636FBFF00D45682 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				23589455263853D40098AC85 /* GoogleService-Info.plist */,
+				23351EAC2636D3E30057391D /* Info.plist */,
 				23351E9E2636D3E10057391D /* AppDelegate.swift */,
 				23351EA72636D3E30057391D /* Assets.xcassets */,
 				23351EA92636D3E30057391D /* LaunchScreen.storyboard */,
@@ -173,7 +175,7 @@
 				23351EA42636D3E10057391D /* Home.storyboard */,
 				23351EA22636D3E10057391D /* HomeViewController.swift */,
 				2321AE032637029300D45682 /* HomeVC+Delegate.swift */,
-				2321AE1D263714B100D45682 /* HomeVC+SideMenu.swift */,
+				2358945F263853EB0098AC85 /* HomeVC+SideMenu.swift */,
 				23D7A4B02637970B00380312 /* HomeVC+SearchPlaces.swift */,
 			);
 			path = View;
@@ -191,7 +193,7 @@
 		2321AE0826370AEA00D45682 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2321AE0926370AF700D45682 /* UIView.swift */,
+				2358945A263853E10098AC85 /* UIView.swift */,
 				23D7A3F926375C6900380312 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
@@ -225,8 +227,6 @@
 				2321ADEA2636FBDE00D45682 /* Helper */,
 				2321ADEB2636FBEE00D45682 /* Controllers */,
 				2321ADEC2636FBFF00D45682 /* Common */,
-				23351EAC2636D3E30057391D /* Info.plist */,
-				2321ADEF2636FD9A00D45682 /* GoogleService-Info.plist */,
 			);
 			path = MTMSTask;
 			sourceTree = "<group>";
@@ -461,11 +461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23351EAB2636D3E30057391D /* LaunchScreen.storyboard in Resources */,
-				2321ADF02636FD9A00D45682 /* GoogleService-Info.plist in Resources */,
 				23351EA82636D3E30057391D /* Assets.xcassets in Resources */,
 				23D7A48426377A5000380312 /* SourceLocation.storyboard in Resources */,
 				23351EA62636D3E10057391D /* Home.storyboard in Resources */,
 				23D7A49126377B9A00380312 /* SourceLocationCell.xib in Resources */,
+				23589456263853D40098AC85 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +627,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2321AE0A26370AF700D45682 /* UIView.swift in Sources */,
 				23D7A4A026377F6700380312 /* SourceLocationModel.swift in Sources */,
 				23589445263848CC0098AC85 /* DestinationLocationViewModel.swift in Sources */,
 				23D7A4AB26377FB800380312 /* SourceLocationViewModel.swift in Sources */,
@@ -639,10 +638,11 @@
 				23D7A3FA26375C6900380312 /* UITableView+Extensions.swift in Sources */,
 				23351E9F2636D3E10057391D /* AppDelegate.swift in Sources */,
 				23D7A48926377A6300380312 /* SourceLocationViewController.swift in Sources */,
+				23589460263853EB0098AC85 /* HomeVC+SideMenu.swift in Sources */,
 				2321ADF6263700D100D45682 /* GoogleKey.swift in Sources */,
 				23D7A47A26376E2600380312 /* FirebaseKeys.swift in Sources */,
+				2358945B263853E10098AC85 /* UIView.swift in Sources */,
 				23D7A4002637621700380312 /* FirestoreReferenceManager.swift in Sources */,
-				2321AE1E263714B100D45682 /* HomeVC+SideMenu.swift in Sources */,
 				23D7A3F526375BEF00380312 /* SideMenuTableViewController.swift in Sources */,
 				23D7A4B12637970B00380312 /* HomeVC+SearchPlaces.swift in Sources */,
 			);
@@ -823,7 +823,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
-				INFOPLIST_FILE = MTMSTask/Info.plist;
+				INFOPLIST_FILE = MTMSTask/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -843,7 +843,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
-				INFOPLIST_FILE = MTMSTask/Info.plist;
+				INFOPLIST_FILE = MTMSTask/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
