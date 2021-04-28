@@ -21,6 +21,7 @@ class HomeViewModel {
     
     func getDriversData(currentLocation: CLLocation ,completion:@escaping(Bool) -> Void) {
         self.currentLocation = currentLocation
+        self.driverDataArray.removeAll()
         FirestoreReferenceManager.shared.getData(collectionPath: CollectionPath.drivers) { data  in
             
             guard let data = data else {
